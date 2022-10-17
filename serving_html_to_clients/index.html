@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-picture-wrapper{
+    display: flex;
+    padding: 50px 80px;
+    flex: 1 0 50%;
+    background-color: #000;
+}
+
+.img-wrapper{
+    width: 50%; 
+    height: 800px; 
+    overflow: hidden;
+
+}
+
+.img-wrapper img{
+    width: 100%;
+    height: 120%;
+}
+
+.form-wrapper{
+    flex: 1 0 50%;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.form-wrapper h2{
+    padding: 20px 0;
+}
+
+.form-wrapper form div.form-inner-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+form input, form select{
+    padding: 10px;
+    opacity: 0.7;
+}
+
+input[name=name], input[name=email], input[name=edu-qualification], input[name=name-of-clg], textarea{
+    grid-column: 1/3;
+}
+input[type=submit]{
+    position: relative;
+    left: 100%;
+    transform: translateX(-100%);
+    margin-top: 10px;
+    background-color: yellow;
+    border: none;
+    border-radius: 5px;
+}
+</style>
+<body>
+
+    <div class="form-picture-wrapper">
+        <div class="img-wrapper">
+            <img src="assets/form-img.webp" alt="">
+        </div>
+        <div class="form-wrapper">
+            <h2>Registration Form</h2>
+            <form action="">
+               <div class="form-inner-wrapper">
+
+                <input type="text" name="name" id="name" placeholder="Full Name" required>
+                
+                <input type="text" name="place" id="place" placeholder="Place" required>
+                
+                <select name="Gender" id="gender" required>
+                    <option value="Gender">Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>
+                </select>
+                
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                
+                <input type="tel" name="phone" id="phone" pattern="[0-9]{10}" placeholder="Contact No" required>
+
+                <select name="employment-staus" id="stauts" required>
+                    <option value="Employment Status">Employment Status</option>
+                    <option value="Employed">Employed</option>
+                    <option value="Fresher">Fresher</option>
+                    <option value="Student">Student</option>
+                </select>
+
+                <input type="text" name="edu-qualification" id="edu-qualification" placeholder="Education qualification"required>
+
+                <input type="text" name="name-of-clg" id="name-of-college" placeholder="Name of College / Organaization" required>
+
+                <textarea name="about-you" id="message" cols="30" rows="10" placeholder="Tell us more about you"></textarea>
+
+               </div>
+
+               <input type="submit" value="Submit Form">
+
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
