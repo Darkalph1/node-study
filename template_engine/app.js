@@ -5,7 +5,8 @@ let app = express();
 app.set("view engine", "ejs");
 
 app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/home.html");
+  // res.sendFile(__dirname + "/home.html");
+  res.render("home");
 });
 
 app.get("/profile/:name", function (req, res) {

@@ -10,6 +10,8 @@
         </style>
     </head>
     <body>
+        <%- include ('partials/partial.ejs') %>  <!-- including partials in view-->
+
         <h1>welcome to the profile of <%= profile %></h1> <!--giving data from url to this tag-->
         <p><strong>age: </strong><%= person.age %></p>
         <p><strong>Job:</strong> <%= person.jobTitle%></p>
